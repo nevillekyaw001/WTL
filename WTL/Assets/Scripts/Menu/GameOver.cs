@@ -14,7 +14,7 @@ public class GameOver : MonoBehaviour
 
     private void Awake()
     {
-        AdmobManager.instance.ShowRewardedAd();
+        AdmobSystem.instance.ShowInterstitialAd();
     }
 
     private void Start()

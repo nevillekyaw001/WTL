@@ -43,8 +43,8 @@ public class AdmobManager : MonoBehaviour
 
         MobileAds.Initialize(InitializationStatus => { });
 
-        RequestInterstitialAd();
-        RequestRewardedAd();
+        //RequestInterstitialAd();
+        //RequestRewardedAd();
 
     }
 
@@ -55,49 +55,49 @@ public class AdmobManager : MonoBehaviour
     //    bannerAd.LoadAd(request);
     //}
 
-    private void RequestInterstitialAd()
-    {
-        interstitialAd = new InterstitialAd(interstitialAd_ID);
-        interstitialAd.OnAdLoaded += HandleOnAdLoaded;
-        AdRequest request = new AdRequest.Builder().Build();
-        interstitialAd.LoadAd(request);
-    }
+    //private void RequestInterstitialAd()
+    //{
+    //    interstitialAd = new InterstitialAd(interstitialAd_ID);
+    //    interstitialAd.OnAdLoaded += HandleOnAdLoaded;
+    //    AdRequest request = new AdRequest.Builder().Build();
+    //    interstitialAd.LoadAd(request);
+    //}
 
-    private void RequestRewardedAd()
-    {
+    //private void RequestRewardedAd()
+    //{
 
-        rewardedAd = new RewardedAd(rewardedAd_ID);
-        rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
-        rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
-        rewardedAd.OnAdClosed += HandleRewardedAdClosed;
-        rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
-        AdRequest request = new AdRequest.Builder().Build();
-        rewardedAd.LoadAd(request);
+    //    rewardedAd = new RewardedAd(rewardedAd_ID);
+    //    rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
+    //    rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+    //    rewardedAd.OnAdClosed += HandleRewardedAdClosed;
+    //    rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
+    //    AdRequest request = new AdRequest.Builder().Build();
+    //    rewardedAd.LoadAd(request);
 
-    }
+    //}
 
-    public void ShowInterstitialAd()
-    {
-        if (interstitialAd.IsLoaded() && InterPointToGive)
-        {
-            interstitialAd.Show();
+    //public void ShowInterstitialAd()
+    //{
+    //    if (interstitialAd.IsLoaded() && InterPointToGive)
+    //    {
+    //        interstitialAd.Show();
 
-            PointSystem.AdsPoints += 1;
-            PointSystem.updateAdsPoints();
+    //        PointSystem.AdsPoints += 1;
+    //        PointSystem.updateAdsPoints();
 
-            RequestInterstitialAd();
-        }
-    }
-    public void ShowRewardedAd()
-    {
-        if (rewardedAd.IsLoaded() && RewardPointToGive)
-        {
-            rewardedAd.Show();
+    //        RequestInterstitialAd();
+    //    }
+    //}
+    //public void ShowRewardedAd()
+    //{
+    //    if (rewardedAd.IsLoaded() && RewardPointToGive)
+    //    {
+    //        rewardedAd.Show();
 
-            PointSystem.AdsPoints += 10;
-            PointSystem.updateAdsPoints();
-        }
-    }
+    //        PointSystem.AdsPoints += 10;
+    //        PointSystem.updateAdsPoints();
+    //    }
+    //}
 
     public void HandleOnAdLoaded(object sender, EventArgs args)
     {
@@ -111,17 +111,17 @@ public class AdmobManager : MonoBehaviour
 
     public void HandleRewardedAdFailedToShow(object sender, AdErrorEventArgs args)
     {
-        RequestRewardedAd();
+        //RequestRewardedAd();
     }
 
     public void HandleUserEarnedReward(object sender, Reward args)
     {
 
-        RequestRewardedAd();
+        //RequestRewardedAd();
     }
 
     public void HandleRewardedAdClosed(object sender, EventArgs args)
     {
-        RequestRewardedAd();
+        //RequestRewardedAd();
     }
 }
