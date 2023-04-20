@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameOver : MonoBehaviour
 {
 
-    public Text loadScoreText; //load score gameobject in gameover
-    public Text highScoreText; // high score gameobject in gameover
+    public TextMeshProUGUI loadScoreText; //load score gameobject in gameover
+    public TextMeshProUGUI highScoreText; // high score gameobject in gameover
     public GameObject LoadingScreen;
     public Slider slider;
 

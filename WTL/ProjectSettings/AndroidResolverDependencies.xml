@@ -10,9 +10,9 @@
     <file>Assets/Plugins/Android/androidx.arch.core.core-common-2.1.0.jar</file>
     <file>Assets/Plugins/Android/androidx.arch.core.core-runtime-2.1.0.aar</file>
     <file>Assets/Plugins/Android/androidx.asynclayoutinflater.asynclayoutinflater-1.0.0.aar</file>
-    <file>Assets/Plugins/Android/androidx.browser.browser-1.4.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.browser.browser-1.5.0.aar</file>
     <file>Assets/Plugins/Android/androidx.collection.collection-1.1.0.jar</file>
-    <file>Assets/Plugins/Android/androidx.concurrent.concurrent-futures-1.0.0.jar</file>
+    <file>Assets/Plugins/Android/androidx.concurrent.concurrent-futures-1.2.0-alpha01.jar</file>
     <file>Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.core.core-1.6.0.aar</file>
     <file>Assets/Plugins/Android/androidx.cursoradapter.cursoradapter-1.0.0.aar</file>
@@ -61,11 +61,10 @@
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-tasks-18.0.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.ump.user-messaging-platform-2.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.games.gpgs-plugin-support-0.10.14.aar</file>
-    <file>Assets/Plugins/Android/com.google.guava.listenablefuture-1.0.jar</file>
   </files>
   <settings>
     <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
-    <setting name="bundleId" value="com.G.O.A.TStudio.WheelToLive" />
+    <setting name="bundleId" value="com.GOATStudio.WheelToLive" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradlePropertiesTemplateEnabled" value="True" />

@@ -9,6 +9,8 @@ TagManager:
   - EnemySpawner
   - UI
   - HardcoreSpawner
+  - Coin
+  - CoinSpawner
   layers:
   - Default
   - TransparentFX

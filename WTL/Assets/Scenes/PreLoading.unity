@@ -303,6 +303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CurrencyGameObject
       objectReference: {fileID: 0}
+    - target: {fileID: 7770955311966181602, guid: 40419ca64eadb4e20907cc3125f13104, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7770955311966181603, guid: 40419ca64eadb4e20907cc3125f13104, type: 3}
       propertyPath: m_RootOrder
       value: 2

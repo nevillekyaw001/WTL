@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class HighScore : MonoBehaviour
 {
     public SpriteRenderer sr;
-    public Text highScoreText;
+    public TextMeshProUGUI highScoreText;
     int hs;
     public Sprite[] sprites;
-    public Text rankName;
-    public Text levelUp;
+    public TextMeshProUGUI rankName;
+    public TextMeshProUGUI levelUp;
     
     private int rankNumber = 0;
 

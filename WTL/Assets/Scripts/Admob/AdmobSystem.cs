@@ -43,6 +43,7 @@ public class AdmobSystem : MonoBehaviour
         MobileAds.Initialize((InitializationStatus initStatus) =>{});
         LoadInterstitialAd();
         LoadRewardedAd();
+        
     }
 
     // Update is called once per frame
@@ -51,7 +52,7 @@ public class AdmobSystem : MonoBehaviour
         if(interstitialAd != null)
         {
             interstitialAd = null;
-            interstitialAd.Destroy();
+            //interstitialAd.Destroy();
         }
 
         var adRequest = new AdRequest.Builder()
@@ -81,11 +82,62 @@ public class AdmobSystem : MonoBehaviour
         {
             Debug.Log("Showing interstitial ad.");
             interstitialAd.Show();
+            
         }
         else
         {
             Debug.LogError("Interstitial ad is not ready yet.");
         }
+        RegisterEventHandlers(interstitialAd);
+        RegisterReloadHandler(interstitialAd);
+    }
+
+    public void LoadRewardedAd()
+    {
+        if (rewardedAd != null)
+        {
+            rewardedAd.Destroy();
+            rewardedAd = null;
+        }
+
+        Debug.Log("Loading the rewarded ad.");
+
+        // create our request used to load the ad.
+        var adRequest = new AdRequest.Builder().Build();
+
+        // send the request to load the ad.
+        RewardedAd.Load(_rewardedAdUnitId, adRequest,
+            (RewardedAd ad, LoadAdError error) =>
+            {
+                // if error is not null, the load request failed.
+                if (error != null || ad == null)
+                {
+                    Debug.LogError("Rewarded ad failed to load an ad " +
+                                   "with error : " + error);
+                    return;
+                }
+
+                Debug.Log("Rewarded ad loaded with response : "
+                          + ad.GetResponseInfo());
+
+                rewardedAd = ad;
+            });
+    }
+
+    public void ShowRewardedAd()
+    {
+        const string rewardMsg =
+            "Rewarded ad rewarded the user. Type: {0}, amount: {1}.";
+
+        if (rewardedAd != null && rewardedAd.CanShowAd())
+        {
+            rewardedAd.Show((Reward reward) =>
+            {
+                // TODO: Reward the user.
+                Debug.Log(string.Format(rewardMsg, reward.Type, reward.Amount));
+            });
+        }
+        
     }
 
     private void RegisterEventHandlers(InterstitialAd ad)
@@ -131,6 +183,7 @@ public class AdmobSystem : MonoBehaviour
         ad.OnAdFullScreenContentClosed += () =>
         {
             Debug.Log("Interstitial Ad full screen content closed.");
+            interstitialAd.Destroy();
 
             // Reload the ad so that we can show another as soon as possible.
             LoadInterstitialAd();
@@ -140,58 +193,13 @@ public class AdmobSystem : MonoBehaviour
         {
             Debug.LogError("Interstitial ad failed to open full screen content " +
                            "with error : " + error);
-
+            interstitialAd.Destroy();
             // Reload the ad so that we can show another as soon as possible.
             LoadInterstitialAd();
         };
     }
 
-    public void LoadRewardedAd()
-    {
-        if (rewardedAd != null)
-        {
-            rewardedAd.Destroy();
-            rewardedAd = null;
-        }
-
-        Debug.Log("Loading the rewarded ad.");
-
-        // create our request used to load the ad.
-        var adRequest = new AdRequest.Builder().Build();
-
-        // send the request to load the ad.
-        RewardedAd.Load(_rewardedAdUnitId, adRequest,
-            (RewardedAd ad, LoadAdError error) =>
-            {
-              // if error is not null, the load request failed.
-              if (error != null || ad == null)
-                {
-                    Debug.LogError("Rewarded ad failed to load an ad " +
-                                   "with error : " + error);
-                    return;
-                }
-
-                Debug.Log("Rewarded ad loaded with response : "
-                          + ad.GetResponseInfo());
-
-                rewardedAd = ad;
-            });
-    }
-
-    public void ShowRewardedAd()
-    {
-        const string rewardMsg =
-            "Rewarded ad rewarded the user. Type: {0}, amount: {1}.";
-
-        if (rewardedAd != null && rewardedAd.CanShowAd())
-        {
-            rewardedAd.Show((Reward reward) =>
-            {
-                // TODO: Reward the user.
-                Debug.Log(string.Format(rewardMsg, reward.Type, reward.Amount));
-            });
-        }
-    }
+   
 
     private void RegisterEventHandlers(RewardedAd ad)
     {

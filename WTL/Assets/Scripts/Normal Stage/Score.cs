@@ -2,12 +2,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using TMPro;
 
 public class Score : MonoBehaviour
 {
     public static Score instance;
-    public Text scoreText;
-    public Text highScoreText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI highScoreText;
     int score = 0;
     public int highScore = 0;
     
@@ -29,9 +30,9 @@ public class Score : MonoBehaviour
     }
 
     //add point system for destorying enemies
-    public void AddPoint(int Svaule) //argument in hexagon script
+    public void AddPoint(int Svalue) //argument in hexagon script
     {
-        score += Svaule;
+        score += Svalue;
         scoreText.text = score.ToString();
 
         if (highScore < score)

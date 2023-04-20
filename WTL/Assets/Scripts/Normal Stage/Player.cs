@@ -53,13 +53,18 @@ public class Player : MonoBehaviour
             //Visual effect
             EXPO.Play();
 
-            if (AdmobManager.instance.InterPointToGive) //admob plsss
-            {
-                Time.timeScale = 0.1f;
-                StartCoroutine(AfterDead());
-            }
+            //if (AdmobSystem.instance.InterPointToGive) //admob plsss
+            //{
+            //    Time.timeScale = 0.1f;
+            //    StartCoroutine(AfterDead());
+            //}
 
+            StartCoroutine(AfterDead());
+        }
 
+        if (collision.CompareTag("Coin"))
+        {
+            
         }
     }
 
