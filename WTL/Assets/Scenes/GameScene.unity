@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bc244594c093146953adfa0111f91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 2
   spawnRate: 1
   shrinkSpeed: 1
   Coin: {fileID: 1588847179013776526, guid: eef462591b8ca5c459bdf27faded76b1, type: 3}
@@ -7302,7 +7302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335376558858302252, guid: 9d17842a91f044453945e79d0cffb9f0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335376558858302253, guid: 9d17842a91f044453945e79d0cffb9f0, type: 3}
       propertyPath: moveSpeed

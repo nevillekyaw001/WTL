@@ -39,5 +39,8 @@ public class PointSystem : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    
+    public void ResetCoinValue()
+    {
+        PlayerPrefs.SetInt("Coins", 0);
+    }
 }

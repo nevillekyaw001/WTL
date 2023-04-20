@@ -51,65 +51,65 @@ public class CharacterManager : MonoBehaviour
             unlock.text = " ";
         }
 
-        if (selectedOption == 2 && PlayerPrefs.GetInt("Coins") < 150)
+        if (selectedOption == 2 && PlayerPrefs.GetInt("Coins") < 200)
         {
             unlock.text = "Get 150 Coins to unlock this wheel!";
         }
-        if (selectedOption == 2 && PlayerPrefs.GetInt("Coins") >= 150)
+        if (selectedOption == 2 && PlayerPrefs.GetInt("Coins") >= 200)
         {
             unlock.text = " ";
         }
 
-        if (selectedOption == 3 && PlayerPrefs.GetInt("Coins") < 200)
+        if (selectedOption == 3 && PlayerPrefs.GetInt("Coins") < 400)
         {
             unlock.text = "Get 200 Coins to unlock this wheel!";
         }
-        if (selectedOption == 3 && PlayerPrefs.GetInt("Coins") >= 200)
+        if (selectedOption == 3 && PlayerPrefs.GetInt("Coins") >= 400)
         {
             unlock.text = " ";
         }
 
-        if (selectedOption == 4 && PlayerPrefs.GetInt("Coins") < 300)
+        if (selectedOption == 4 && PlayerPrefs.GetInt("Coins") < 600)
         {
             unlock.text = "Get 300 Coins to unlock this wheel!";
         }
-        if (selectedOption == 4 && PlayerPrefs.GetInt("Coins") >= 300)
+        if (selectedOption == 4 && PlayerPrefs.GetInt("Coins") >= 600)
         {
             unlock.text = " ";
         }
 
-        if (selectedOption == 5 && PlayerPrefs.GetInt("Coins") < 400)
+        if (selectedOption == 5 && PlayerPrefs.GetInt("Coins") < 800)
         {
             unlock.text = "Get 400 Coins to unlock this wheel!";
         }
-        if (selectedOption == 5 && PlayerPrefs.GetInt("Coins") >= 400)
+        if (selectedOption == 5 && PlayerPrefs.GetInt("Coins") >= 800)
         {
             unlock.text = " ";
         }
 
-        if (selectedOption == 6 && PlayerPrefs.GetInt("Coins") < 600)
+        if (selectedOption == 6 && PlayerPrefs.GetInt("Coins") < 1000)
         {
             unlock.text = "Get 600 Coins to unlock this wheel!";
         }
-        if (selectedOption == 6 && PlayerPrefs.GetInt("Coins") >= 600)
+        if (selectedOption == 6 && PlayerPrefs.GetInt("Coins") >= 1000)
         {
             unlock.text = " ";
         }
 
-        if (selectedOption == 7 && PlayerPrefs.GetInt("Coins") < 800)
+        if (selectedOption == 7 && PlayerPrefs.GetInt("Coins") < 1200)
         {
             unlock.text = "Get 800 Coins to unlock this wheel!";
         }
-        if (selectedOption == 7 && PlayerPrefs.GetInt("Coins") >= 800)
+        if (selectedOption == 7 && PlayerPrefs.GetInt("Coins") >= 1200)
         {
             unlock.text = " ";
         }
 
-        if (selectedOption == 8 && PlayerPrefs.GetInt("Coins") < 1000)
+        if (selectedOption == 8 && PlayerPrefs.GetInt("Coins") < 1500)
         {
             unlock.text = "Get 1000 Coins to unlock this wheel!";
         }
-        if (selectedOption == 8 && PlayerPrefs.GetInt("Coins") >= 1000)
+        if (selectedOption == 8 && PlayerPrefs.GetInt("Coins") >= 1500)
         {
             unlock.text = " ";
         }
@@ -171,59 +171,59 @@ public class CharacterManager : MonoBehaviour
         {
             Debug.Log("You need to get 100 to unlock this");
         }
-        if (selectedOption == 2 && PlayerPrefs.GetInt("Coins") >= 150)
+        if (selectedOption == 2 && PlayerPrefs.GetInt("Coins") >= 200)
         {
             StartCoroutine(LoadAsynchronously(GameScene));
         }
-        if (selectedOption == 2 && PlayerPrefs.GetInt("Coins") < 150)
+        if (selectedOption == 2 && PlayerPrefs.GetInt("Coins") < 200)
         {
             Debug.Log("You need to get 200 to unlock this");
         }
-        if (selectedOption == 3 && PlayerPrefs.GetInt("Coins") >= 200)
+        if (selectedOption == 3 && PlayerPrefs.GetInt("Coins") >= 400)
         {
             StartCoroutine(LoadAsynchronously(GameScene));
         }
-        if (selectedOption == 3 && PlayerPrefs.GetInt("Coins") < 200)
+        if (selectedOption == 3 && PlayerPrefs.GetInt("Coins") < 400)
         {
             Debug.Log("You need to get 300 to unlock this");
         }
-        if (selectedOption == 4 && PlayerPrefs.GetInt("Coins") >= 300)
+        if (selectedOption == 4 && PlayerPrefs.GetInt("Coins") >= 600)
         {
             StartCoroutine(LoadAsynchronously(GameScene));
         }
-        if (selectedOption == 4 && PlayerPrefs.GetInt("Coins") < 300)
+        if (selectedOption == 4 && PlayerPrefs.GetInt("Coins") < 600)
         {
             Debug.Log("You need to get 400 to unlock this");
         }
-        if (selectedOption == 5 && PlayerPrefs.GetInt("Coins") >= 400)
+        if (selectedOption == 5 && PlayerPrefs.GetInt("Coins") >= 800)
         {
             StartCoroutine(LoadAsynchronously(GameScene));
         }
-        if (selectedOption == 5 && PlayerPrefs.GetInt("Coins") < 400)
+        if (selectedOption == 5 && PlayerPrefs.GetInt("Coins") < 800)
         {
             Debug.Log("You need to get 400 to unlock this");
         }
-        if (selectedOption == 6 && PlayerPrefs.GetInt("Coins") >= 600)
+        if (selectedOption == 6 && PlayerPrefs.GetInt("Coins") >= 1000)
         {
             StartCoroutine(LoadAsynchronously(GameScene));
         }
-        if (selectedOption == 6 && PlayerPrefs.GetInt("Coins") < 600)
+        if (selectedOption == 6 && PlayerPrefs.GetInt("Coins") < 1000)
         {
             Debug.Log("You need to get 400 to unlock this");
         }
-        if (selectedOption == 7 && PlayerPrefs.GetInt("Coins") >= 800)
+        if (selectedOption == 7 && PlayerPrefs.GetInt("Coins") >= 1200)
         {
             StartCoroutine(LoadAsynchronously(GameScene));
         }
-        if (selectedOption == 7 && PlayerPrefs.GetInt("Coins") < 800)
+        if (selectedOption == 7 && PlayerPrefs.GetInt("Coins") < 1200)
         {
             Debug.Log("You need to get 400 to unlock this");
         }
-        if (selectedOption == 8 && PlayerPrefs.GetInt("Coins") >= 1000)
+        if (selectedOption == 8 && PlayerPrefs.GetInt("Coins") >= 1500)
         {
             StartCoroutine(LoadAsynchronously(GameScene));
         }
-        if (selectedOption == 8 && PlayerPrefs.GetInt("Coins") < 1000)
+        if (selectedOption == 8 && PlayerPrefs.GetInt("Coins") < 1500)
         {
             Debug.Log("You need to get 20000 to unlock this");
         }
