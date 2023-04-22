@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class hehehehe : MonoBehaviour
 {
-    public Text point;
+    public TextMeshProUGUI point;
     public SpriteRenderer sr;
     public Sprite[] newSprites;
     int ads;
@@ -17,9 +18,9 @@ public class hehehehe : MonoBehaviour
     void Awake()
     {
 
-        point.text = "Ads Points : " +PointSystem.AdsPoints.ToString();
+        point.text = "Coins : " + PointSystem.Coin.ToString();
         sr = GetComponent<SpriteRenderer>();
-        ads = PlayerPrefs.GetInt("AdsPoints");
+        ads = PlayerPrefs.GetInt("Coins");
         
     }
 
@@ -27,7 +28,7 @@ public class hehehehe : MonoBehaviour
     
     public void ResetADspoint()
     {
-        PlayerPrefs.SetInt("AdsPoints", 0);
+        PlayerPrefs.SetInt("Coins", 0);
         
     }
 }

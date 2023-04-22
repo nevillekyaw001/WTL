@@ -11,7 +11,7 @@ public class HardcoreButtons : MonoBehaviour
 
     private void Awake()
     {
-        AdmobManager.instance.ShowRewardedAd();
+        AdmobSystem.instance.ShowInterstitialAd();
     }
 
     // Start is called before the first frame update

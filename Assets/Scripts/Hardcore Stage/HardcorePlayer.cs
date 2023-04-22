@@ -56,11 +56,10 @@ public class HardcorePlayer : MonoBehaviour
             
             EXPO.Play();
             reverseRotator.instance.DeadMusic();
-            if (AdmobManager.instance.InterPointToGive)
-            {
-                Time.timeScale = 0.1f;
-                StartCoroutine(AfterDead());
-            }
+           
+            Time.timeScale = 0.1f;
+            StartCoroutine(AfterDead());
+            
 
 
         }
