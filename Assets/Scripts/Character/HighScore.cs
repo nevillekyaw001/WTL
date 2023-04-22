@@ -20,7 +20,7 @@ public class HighScore : MonoBehaviour
 
     private void Awake()
     {
-        AdmobSystem.instance.ShowInterstitialAd();
+        //AdmobSystem.instance.ShowInterstitialAd();
         highScoreText.text = "Highscore : " + PlayerPrefs.GetInt("highScore").ToString();
         sr = GetComponent<SpriteRenderer>();
         hs = PlayerPrefs.GetInt("highScore");

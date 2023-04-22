@@ -9,22 +9,22 @@ public class AdmobSystem : MonoBehaviour
     public static AdmobSystem instance;
 
 #if UNITY_ANDROID
-    private string _interstitialAdUnitId = "";
-    //sample-ca-app-pub-3940256099942544/1033173712
-    private string _rewardedAdUnitId = "";
-    //sample-ca-app-pub-3940256099942544/5224354917
+    private string _interstitialAdUnitId = "ca-app-pub-3940256099942544/1033173712";
+    //sample-
+    private string _rewardedAdUnitId = "ca-app-pub-3940256099942544/5224354917";
+    //sample-
 
 #elif UNITY_IPHONE
-  private string _interstitialAdUnitId = "";
-  //sample-ca-app-pub-3940256099942544/4411468910
-  private string _rewardedAdUnitId = "";
-  //sample-ca-app-pub-3940256099942544/1712485313
+  private string _interstitialAdUnitId = "ca-app-pub-3940256099942544/4411468910";
+  //sample-
+  private string _rewardedAdUnitId = "ca-app-pub-3940256099942544/1712485313";
+  //sample-
 
 #else
-  private string _interstitialAdUnitId = "";
-  //unused
-  private string _rewardedAdUnitId = "";
-  //unused
+  private string _interstitialAdUnitId = "unused";
+  //
+  private string _rewardedAdUnitId = "unused";
+  //
 
 #endif
 

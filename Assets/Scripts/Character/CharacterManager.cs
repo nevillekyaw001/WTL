@@ -19,7 +19,7 @@ public class CharacterManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        AdmobSystem.instance.ShowInterstitialAd();
+        //AdmobSystem.instance.ShowInterstitialAd();
     }
 
     void Start()
