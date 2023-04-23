@@ -10,6 +10,7 @@ public class GameOver : MonoBehaviour
 
     public TextMeshProUGUI loadScoreText; //load score gameobject in gameover
     public TextMeshProUGUI highScoreText; // high score gameobject in gameover
+    public TMP_Text Coin;
     public GameObject LoadingScreen;
     public Slider slider;
 
@@ -22,6 +23,7 @@ public class GameOver : MonoBehaviour
     {
         loadScoreText.text = " " + PlayerPrefs.GetInt("GotScore").ToString(); //announce value of score in Load score gameobject in gameover from last scene
         highScoreText.text = "HIGHSCORE: " + PlayerPrefs.GetInt("highScore").ToString(); //announce value of highscore in Highscore gameobject in gameover scene
+        Coin.text = "Coin: " + PlayerPrefs.GetInt("Coins").ToString();
     }
     public void Restart(string GameScene)
     {
